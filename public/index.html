@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Node2Know — Express Static</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <script defer src="/js/app.js"></script>
+</head>
+<body>
+  <div class="card">
+    <h1>Express Static Middleware</h1>
+    <p>
+      This page loads assets from <code>/public</code> via:
+      <code>app.use(express.static("public"))</code>
+    </p>
+
+    <p id="status">Client JS not loaded yet…</p>
+
+    <h2>Assets</h2>
+    <ul>
+      <li><a href="/css/style.css">/css/style.css</a></li>
+      <li><a href="/js/app.js">/js/app.js</a></li>
+      <li><a href="/img/logo.png">/img/logo.png</a></li>
+    </ul>
+
+    <h2>Uploads (second static folder)</h2>
+    <p>
+      This image is served from <code>/uploads</code> via:
+      <code>app.use(express.static("uploads"))</code>
+    </p>
+    <p><a href="/profile-demo.png">/profile-demo.png</a></p>
+
+    <p><img src="/img/logo.png" alt="logo" width="128" height="128" /></p>
+  </div>
+</body>
+</html>
